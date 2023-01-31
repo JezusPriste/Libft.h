@@ -6,11 +6,13 @@
 #    By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/26 18:37:18 by dborgian          #+#    #+#              #
-#    Updated: 2023/01/31 12:45:10 by dborgian         ###   ########.fr        #
+#    Updated: 2023/01/31 14:20:56 by dborgian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+HEADER = ${NAME:.a=.h}
 
 FILES = ft_isalpha.c ft_isdigit.c \
 ft_isalnum.c ft_isascii.c \
@@ -42,8 +44,6 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-HEADER = ${NAME:.a=.h}
-
 LIBC = ar rcs
 
 #B_OBJ = $(BONUS:.c=.o)#
@@ -52,19 +52,19 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): ${OBJ}
 			 ${LIBC} $(NAME) $(OBJ)
 			 ranlib ${NAME}
 
-.o:.c
-	$(CC) $(CFLAGS) ${OBJECTS} $< -O ${<:.c=.o}
+.c.o:
+		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
 clean: 
-		${RM} ${OBJECTS}
+		${RM} ${OBJ}
 	
 
 fclean: clean
-		${RM} $(NAME)
+		${RM} ${NAME}
 
 re: fclean all
 

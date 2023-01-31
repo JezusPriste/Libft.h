@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 15:54:00 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 10:58:56 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 14:55:45 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:05:47 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
-#include "libft.h"
+
+//#include "libft.h"
+
+size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

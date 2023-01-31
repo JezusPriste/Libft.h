@@ -6,13 +6,21 @@
 /*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:54:25 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/26 18:57:15 by dborgian         ###   ########.fr       */
+/*   Updated: 2023/01/31 14:05:31 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *str);
+size_t	ft_strlens(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
 
 char	*ft_strdup(const char *s1)
 {
@@ -21,7 +29,7 @@ char	*ft_strdup(const char *s1)
 	int		k;
 
 	i = 0;
-	k = ft_strlen(s1);
+	k = ft_strlens(s1);
 	s2 = ((char *)malloc(sizeof(char) * k + 1));
 	if (s2 == NULL)
 	{

@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/30 12:13:52 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 16:29:06 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/17 13:48:19 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/20 17:19:04 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_isalpha(int c)
 {
-	if (n == -2147483648)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
-		n = 147483648;
-	}
-	else if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n *= -1;
-	}
-	if (n < 10)
-	{
-		ft_putchar_fd(n + 48, fd);
-		return ;
-	}
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
 	else
-		ft_putnbr_fd(n / 10, fd);
-	ft_putnbr_fd(n % 10, fd);
+		return (0);
 }
