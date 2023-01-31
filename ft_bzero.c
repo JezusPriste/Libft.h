@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 13:17:23 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 12:45:22 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:44:24 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:44:30 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h> 
+
 #include "libft.h"
 
 void	ft_bzero(void *b, size_t len)

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 11:49:42 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 11:24:13 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:47:08 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:47:11 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len)

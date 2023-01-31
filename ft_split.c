@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split2.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 18:06:33 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/25 12:22:52 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:30:19 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:30:26 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
+#include "libft.h"
 
 static int	ft_nword(char const *s, char c)
 {
@@ -30,7 +31,7 @@ static int	ft_nword(char const *s, char c)
 	return (nword);
 }
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+static char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int	i;
 

@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 11:38:33 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 12:10:27 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:50:33 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:50:36 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 static unsigned int	ft_con(char c, char const *set)

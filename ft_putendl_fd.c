@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/30 12:07:07 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 12:15:39 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:47:25 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:47:27 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 18:37:17 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 13:08:47 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:45:47 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:45:51 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

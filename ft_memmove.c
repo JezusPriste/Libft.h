@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 14:29:54 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/26 18:55:12 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:47:00 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:47:03 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

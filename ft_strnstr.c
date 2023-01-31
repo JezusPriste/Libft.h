@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 19:34:50 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 16:13:39 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:50:03 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:50:20 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 static int	ft_strcmp(char *a, char *b, size_t pos)

@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 17:20:45 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/26 19:05:35 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:49:47 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:49:52 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *str);

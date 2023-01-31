@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 16:59:21 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/30 14:35:21 by dborgian         ###   ########.fr       */
+/*   Created: 2023/01/31 15:49:57 by dborgian          #+#    #+#             */
+/*   Updated: 2023/01/31 15:49:58 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
