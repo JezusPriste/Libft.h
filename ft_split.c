@@ -5,87 +5,96 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dborgian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 15:30:19 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 15:30:26 by dborgian         ###   ########.fr       */
+/*   Created: 2023/02/01 14:01:18 by dborgian          #+#    #+#             */
+/*   Updated: 2023/02/01 14:05:30 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nword(char const *s, char c)
+static char	**ft_malloc_error(char **tab)
 {
-	unsigned int	i;
-	int				nword;
+	size_t	i;
 
 	i = 0;
-	nword = 0;
-	while (s[i])
+	while (tab[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			nword++;
-		while (s[i] && (s[i] != c))
-			i++;
-	}
-	return (nword);
-}
-
-static char	*ft_strncpy(char *dest, const char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		++i;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
+		free(tab[i]);
 		i++;
 	}
-	return (dest);
+	free(tab);
+	return (NULL);
 }
 
-static char	*ft_strndup(const char *s, size_t n)
+static size_t	ft_nb_words(char const *s, char c)
 {
-	char	*str;
+	size_t	i;
+	size_t	nb_words;
 
-	str = (char *)malloc(sizeof(char) * n + 1);
-	if (str == NULL)
-		return (NULL);
-	str = ft_strncpy(str, s, n);
-	str[n] = '\0';
-	return (str);
+	if (!s[0])
+		return (0);
+	i = 0;
+	nb_words = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			nb_words++;
+			while (s[i] && s[i] == c)
+				i++;
+			continue ;
+		}
+		i++;
+	}
+	if (s[i - 1] != c)
+		nb_words++;
+	return (nb_words);
+}
+
+static void	ft_get_next_word(char **next_word, size_t *next_word_len, char c)
+{
+	size_t	i;
+
+	*next_word += *next_word_len;
+	*next_word_len = 0;
+	i = 0;
+	while (**next_word && **next_word == c)
+		(*next_word)++;
+	while ((*next_word)[i])
+	{
+		if ((*next_word)[i] == c)
+			return ;
+		(*next_word_len)++;
+		i++;
+	}
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
 	char	**tab;
+	char	*next_word;
+	size_t	next_word_len;
+	size_t	i;
 
-	i = 0;
-	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_nword(s, c)) + 1);
-	if (tab == NULL)
+	if (!s)
 		return (NULL);
-	while (s[i])
+	tab = (char **)malloc(sizeof(char *) * (ft_nb_words(s, c) + 1));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	next_word = (char *)s;
+	next_word_len = 0;
+	while (i < ft_nb_words(s, c))
 	{
-		while (s[i] == c)
-			i++;
-		j = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > j)
-		{
-			tab[k] = ft_strndup(s + j, i - j);
-			k++;
-		}
+		ft_get_next_word(&next_word, &next_word_len, c);
+		tab[i] = (char *)malloc(sizeof(char) * (next_word_len + 1));
+		if (!tab[i])
+			return (ft_malloc_error(tab));
+		ft_strlcpy(tab[i], next_word, next_word_len + 1);
+		i++;
 	}
-	tab[k] = NULL;
+	tab[i] = NULL;
 	return (tab);
 }

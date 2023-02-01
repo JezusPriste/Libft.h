@@ -6,7 +6,7 @@
 /*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:50:03 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 15:50:20 by dborgian         ###   ########.fr       */
+/*   Updated: 2023/02/01 14:21:13 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	size_n;
 	int		b;
 
+	if (!haystack && len == 0)
+		return ((char *)(needle));
 	i = 0;
 	size_n = ft_strlen(needle);
 	if (needle[0] == '\0')

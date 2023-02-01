@@ -6,7 +6,7 @@
 /*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:49:47 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 15:49:52 by dborgian         ###   ########.fr       */
+/*   Updated: 2023/02/01 14:34:21 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == NULL || f == NULL)
 		return (NULL);
 	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char *) * (len + 1));
+	str = (char *)malloc((ft_strlen(s) + 1));
 	if (str == NULL)
 		return (NULL);
 	while (i < len)

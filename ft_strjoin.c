@@ -6,7 +6,7 @@
 /*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:48:47 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 15:48:49 by dborgian         ###   ########.fr       */
+/*   Updated: 2023/02/01 15:46:01 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	lens1 = 0;
 	lens2 = 0;
-	str = (char *)malloc(sizeof(char *) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (str == NULL)
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 	{
 		return (NULL);
 	}

@@ -6,7 +6,7 @@
 /*   By: dborgian <dborgian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:49:24 by dborgian          #+#    #+#             */
-/*   Updated: 2023/01/31 15:49:27 by dborgian         ###   ########.fr       */
+/*   Updated: 2023/02/01 14:26:15 by dborgian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dstsize2;
 	size_t	srcsize;
 
+	if (!dst && dstsize == 0)
+		return (ft_strlen(src));
 	dstsize2 = ft_strlen(dst);
 	srcsize = ft_strlen(src);
-	if (!dst && !src)
-		return (0);
 	if (dstsize2 > dstsize || dstsize == 0)
 		return (dstsize + srcsize);
 	j = ft_strlen(dst);
